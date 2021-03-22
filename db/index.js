@@ -79,7 +79,8 @@ async function updateUser(id, fields = {}) {
         UPDATE users
         SET ${setString}
         WHERE id=${id}
-        RETURNING *;
+        
+        
       `, Object.values(fields));
 
         return user;
